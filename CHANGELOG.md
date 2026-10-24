@@ -12,7 +12,15 @@ rastreabilidade versão ↔ commit — está em
 
 ## [Unreleased]
 
-<!-- Nada pendente desde a 1.23.10.2026 — a primeira versão do projeto. -->
+### Added
+
+- **Publicação em produção:** o build de `dist` passou a ser servido pelo **Cloudflare
+  Pages** (projeto `melevafeso`, branch de produção `main`) no domínio
+  **https://melevafeso.guinossi.com**, com CNAME `melevafeso` → `melevafeso.pages.dev`
+  (proxy ativo e HTTPS automático) na zona `guinossi.com`. O comando de redeploy está no
+  `README.md`.
+
+<!-- Nada pendente além da publicação desde a 1.23.10.2026 — a primeira versão do projeto. -->
 
 ## [1.23.10.2026] - 2026-10-23
 

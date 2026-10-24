@@ -50,6 +50,19 @@ docs/VERSIONAMENTO.md      convenção de versionamento e changelog
 As demais telas existem no arquivo do Figma e serão portadas na sequência. O escopo é
 **visual**: os formulários não enviam dados e os botões apenas navegam entre telas.
 
+## Deploy
+
+Produção: **https://melevafeso.guinossi.com** — Cloudflare Pages, projeto `melevafeso`,
+branch `main`, servindo o conteúdo de `dist`.
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name=melevafeso --branch=main
+```
+
+O domínio é um CNAME `melevafeso` → `melevafeso.pages.dev` (proxy ativo, HTTPS automático)
+na zona `guinossi.com`.
+
 ## Versionamento
 
 O projeto usa **DateVer** `N.DD.MM.YYYY` (tag `vN.DD.MM.YYYY`) e changelog no formato

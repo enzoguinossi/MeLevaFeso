@@ -91,7 +91,11 @@ export default function Landing({ onNavigate }) {
           <a className="btn btn--ghost" href="#entrar" onClick={(event) => onNavigate("login", event)}>
             Entrar
           </a>
-          <a className="btn btn--gradient" href="#criar-conta">
+          <a
+            className="btn btn--gradient"
+            href="#/signup"
+            onClick={(event) => onNavigate("signup", event)}
+          >
             Criar conta
           </a>
         </div>
@@ -118,7 +122,11 @@ export default function Landing({ onNavigate }) {
           </p>
 
           <div className="hero__actions">
-            <a className="btn btn--gradient btn--lg" href="#criar-conta">
+            <a
+              className="btn btn--gradient btn--lg"
+              href="#/signup"
+              onClick={(event) => onNavigate("signup", event)}
+            >
               Começar agora
               {Icon.arrowRight}
             </a>
@@ -311,7 +319,11 @@ export default function Landing({ onNavigate }) {
             <p>Crie sua conta grátis e encontre sua próxima atividade em minutos.</p>
           </div>
           <div className="cta__actions">
-            <a className="btn btn--white" href="#criar-conta">
+            <a
+              className="btn btn--white"
+              href="#/signup"
+              onClick={(event) => onNavigate("signup", event)}
+            >
               {Icon.arrowRight}
               Criar minha conta
             </a>

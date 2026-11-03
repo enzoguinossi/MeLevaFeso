@@ -94,7 +94,11 @@ export default function Login({ onNavigate }) {
 
           <p className="auth__foot">
             Ainda não tem conta?{" "}
-            <a className="auth__link" href="#criar-conta">
+            <a
+              className="auth__link"
+              href="#/signup"
+              onClick={(event) => onNavigate("signup", event)}
+            >
               Criar conta
             </a>
           </p>

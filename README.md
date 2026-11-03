@@ -30,12 +30,18 @@ src/main.jsx               createRoot + <App />
 src/App.jsx                roteador de telas por hash
 src/screens/Landing.jsx    tela 01 — Landing
 src/screens/Login.jsx      tela 02 — Login
+src/screens/Signup.jsx     tela de cadastro (visual)
+src/screens/StorageTool.jsx  ferramenta de armazenamento (#/storage)
 src/screens/Home.jsx       tela 06 — Início
 src/components/AppShell.jsx  sidebar + topbar das telas internas
+src/services/storage.js    leitura/escrita no armazenamento do navegador
 src/icons.jsx              ícones SVG inline
 src/styles.css             tokens do Figma + estilos
 public/assets/             imagens exportadas do Figma
+docs/README.md             índice da documentação
 docs/VERSIONAMENTO.md      convenção de versionamento e changelog
+docs/ARMAZENAMENTO.md      ferramenta de armazenamento do navegador
+docs/requisitos/           guia + templates de requisitos (RF e RNF)
 ```
 
 ## Telas portadas
@@ -44,6 +50,7 @@ docs/VERSIONAMENTO.md      convenção de versionamento e changelog
 | --- | --- |
 | 01. Landing | ✅ |
 | 02. Login | ✅ |
+| Cadastro | ✅ |
 | 06. Início | ✅ |
 | 03–05, 07–20, modais e M1–M5 | ⏳ pendentes |
 
@@ -62,6 +69,21 @@ npx wrangler pages deploy dist --project-name=melevafeso --branch=main
 
 O domínio é um CNAME `melevafeso` → `melevafeso.pages.dev` (proxy ativo, HTTPS automático)
 na zona `guinossi.com`.
+
+## Documentação
+
+- [`docs/README.md`](docs/README.md) — índice da documentação.
+- [`docs/requisitos/`](docs/requisitos/README.md) — como registrar requisitos funcionais
+  (RF) e não funcionais (RNF), com templates e índice.
+- [`docs/VERSIONAMENTO.md`](docs/VERSIONAMENTO.md) — versionamento e changelog.
+- [`docs/ARMAZENAMENTO.md`](docs/ARMAZENAMENTO.md) — API da ferramenta de armazenamento
+  do navegador.
+
+## Ferramenta de armazenamento
+
+`src/services/storage.js` lê e grava valores JSON no `sessionStorage` ou no
+`localStorage`, usando o namespace `meleva`. Para testar pela interface, rode o projeto e
+abra `http://localhost:5173/#/storage`.
 
 ## Versionamento
 

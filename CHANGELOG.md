@@ -19,8 +19,29 @@ rastreabilidade versão ↔ commit — está em
   **https://melevafeso.guinossi.com**, com CNAME `melevafeso` → `melevafeso.pages.dev`
   (proxy ativo e HTTPS automático) na zona `guinossi.com`. O comando de redeploy está no
   `README.md`.
+- **Documentação de requisitos:** `docs/README.md` (índice da documentação) e
+  `docs/requisitos/` com guia de uso, convenção de IDs/status/prioridade e templates de
+  requisito funcional (`RF-NNN`) e não funcional (`RNF-NNN`), além do índice de
+  rastreabilidade com telas, código e versão.
+- **Ferramenta de armazenamento:** `src/services/storage.js`, uma API própria com JSDoc
+  em português para criar, ler, remover e limpar valores JSON no `sessionStorage` ou no
+  `localStorage`, com namespace `meleva` e fallback seguro. A tela `#/storage`
+  (`src/screens/StorageTool.jsx`) permite testar tudo pela interface.
 
-<!-- Nada pendente além da publicação desde a 1.23.10.2026 — a primeira versão do projeto. -->
+<!-- Pendente para as próximas releases: publicação em produção, documentação de
+requisitos e ferramenta de armazenamento. -->
+
+## [1.03.11.2026] - 2026-11-03
+
+Tela de cadastro do Me Leva, ainda sem lógica de autenticação.
+
+### Added
+
+- **Tela de cadastro:** `src/screens/Signup.jsx`, acessível em `#/signup` pelos CTAs
+  "Criar conta" da Landing e do Login. Formulário visual com nome, e-mail, senha,
+  confirmação e termos; cartão lateral com foto e benefícios. Reutiliza os primitivos de
+  CSS das telas existentes e não tem lógica de autenticação: "Continuar" apenas navega
+  para o Início.
 
 ## [1.23.10.2026] - 2026-10-23
 

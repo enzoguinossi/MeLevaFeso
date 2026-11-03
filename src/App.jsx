@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Landing from "./screens/Landing.jsx";
 import Login from "./screens/Login.jsx";
+import Signup from "./screens/Signup.jsx";
+import StorageTool from "./screens/StorageTool.jsx";
 import Home from "./screens/Home.jsx";
 
 function readScreen() {
@@ -30,6 +32,14 @@ export default function App() {
 
   if (screen === "login") {
     return <Login onNavigate={navigate} />;
+  }
+
+  if (screen === "signup") {
+    return <Signup onNavigate={navigate} />;
+  }
+
+  if (screen === "storage") {
+    return <StorageTool onNavigate={navigate} />;
   }
 
   if (screen === "home") {
